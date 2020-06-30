@@ -9,7 +9,7 @@ export class HelpCommand extends Command {
         });
     }
 
-    execute(): void {
+    public execute(): void {
         const repository = CommandRepository.getInstance();
         const commands = repository.all();
 
