@@ -1,5 +1,5 @@
-const { argv } = process;
+import { CommandRepository } from './commands/CommandRepository';
 
 if (process.env.NODE_ENV !== 'test') {
-    console.log(argv.slice(2));
+    new CommandRepository();
 }

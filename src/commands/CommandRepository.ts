@@ -1,13 +1,29 @@
+import path from 'path';
+import { options } from './../config/config';
 import { Command } from './Command';
+import { promises } from 'fs';
 
 export class CommandRepository {
     private commands: Command[];
 
     constructor() {
-        this.initialize();
+        this.commands = [];
+        this.collect();
     }
 
-    initialize(): void {}
+    private async collect(): Promise<void> {
+        const { commandsPath } = options;
+        const files = await promises.readdir(commandsPath);
+
+        await Promise.all(
+            files.map(async (file) => {
+                const filePath = path.join(commandsPath, file);
+                const command = await import(`../../${filePath}`);
+
+                this.commands.push(command);
+            })
+        );
+    }
 
     find(flag: string): Command {
         return this.commands.find(({ context }) => context.flags.includes(flag));
