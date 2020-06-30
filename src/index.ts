@@ -1,5 +1,6 @@
-import { CommandRepository } from './commands/CommandRepository';
+import { HelpCommand } from './commands/invokable/HelpCommand';
 
 if (process.env.NODE_ENV !== 'test') {
-    new CommandRepository();
+    const command = new HelpCommand();
+    command.execute();
 }
