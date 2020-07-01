@@ -1,6 +1,6 @@
-import { HelpCommand } from './commands/invokable/HelpCommand';
+import { Firecase } from './core/Firecase';
 
 if (process.env.NODE_ENV !== 'test') {
-    const command = new HelpCommand();
-    command.execute();
+    const firecase = new Firecase();
+    firecase.run(process.argv.slice(2));
 }

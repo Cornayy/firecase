@@ -1,3 +1,4 @@
+import { Logger } from './../../util/Logger';
 import { CommandRepository } from './../CommandRepository';
 import { Command } from '../Command';
 
@@ -13,9 +14,9 @@ export class HelpCommand extends Command {
         const repository = CommandRepository.getInstance();
         const commands = repository.all();
 
-        commands.map(({ context }) => {
+        for (const { context } of commands) {
             const flags = context.flags.join(', ');
-            console.log(`${flags} - ${context.description} `);
-        });
+            Logger.info(`${flags} - ${context.description} `);
+        }
     }
 }
