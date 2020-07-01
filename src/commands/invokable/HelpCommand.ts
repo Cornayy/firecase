@@ -14,6 +14,10 @@ export class HelpCommand extends Command {
         const repository = CommandRepository.getInstance();
         const commands = repository.all();
 
+        Logger.info('USAGE');
+        Logger.info('firecase [option...] [path]');
+        Logger.info('OPTIONS');
+
         for (const { context } of commands) {
             const flags = context.flags.join(', ');
             Logger.info(`${flags} - ${context.description} `);

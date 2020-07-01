@@ -1,23 +1,22 @@
-import { Logger } from '../util/Logger.js';
-import { CommandRepository } from './../commands/CommandRepository';
+import { PathResolver } from './../util/PathResolver';
+import { ArgumentParser } from './ArgumentParser';
 
 export class Firecase {
-    private repository: CommandRepository;
+    private filePath?: string;
+    private args: string[];
+    private parser: ArgumentParser;
 
-    constructor() {
-        this.repository = CommandRepository.getInstance();
+    constructor(args: string[]) {
+        this.args = args;
+        this.filePath = PathResolver.resolve(args);
+        this.parser = new ArgumentParser();
     }
 
-    public run(args: string[]): void {
-        const commands = args.map((arg) => this.repository.find(arg)).filter((command) => command);
-
-        if (commands.length === 0) {
-            Logger.info('No commands found, enter --help for all available commands.');
-            return;
-        }
+    public run(): void {
+        const commands = this.parser.parse(this.args);
 
         for (const command of commands) {
-            command.execute();
+            command.execute(this.filePath);
         }
     }
 }
