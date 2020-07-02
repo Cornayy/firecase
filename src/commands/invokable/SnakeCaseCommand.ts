@@ -13,6 +13,6 @@ export class SnakeCaseCommand extends CaseCommand {
     public execute(dir?: string): void {
         if (!dir) return;
 
-        this.fileManager.rename(dir, CaseOption.SnakeCase);
+        this.fileManager.handle(dir, CaseOption.SnakeCase);
     }
 }

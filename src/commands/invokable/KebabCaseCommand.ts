@@ -13,6 +13,6 @@ export class KebabCaseCommand extends CaseCommand {
     public execute(dir?: string): void {
         if (!dir) return;
 
-        this.fileManager.rename(dir, CaseOption.KebabCase);
+        this.fileManager.handle(dir, CaseOption.KebabCase);
     }
 }

@@ -13,6 +13,6 @@ export class PascalCaseCommand extends CaseCommand {
     public execute(dir?: string): void {
         if (!dir) return;
 
-        this.fileManager.rename(dir, CaseOption.PascalCase);
+        this.fileManager.handle(dir, CaseOption.PascalCase);
     }
 }

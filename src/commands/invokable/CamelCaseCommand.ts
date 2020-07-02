@@ -13,6 +13,6 @@ export class CamelCaseCommand extends CaseCommand {
     public execute(dir?: string): void {
         if (!dir) return;
 
-        this.fileManager.rename(dir, CaseOption.CamelCase);
+        this.fileManager.handle(dir, CaseOption.CamelCase);
     }
 }
