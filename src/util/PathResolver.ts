@@ -10,6 +10,6 @@ export class PathResolver {
             })
             .filter((path) => path);
 
-        return path;
+        return path; 
     }
 }

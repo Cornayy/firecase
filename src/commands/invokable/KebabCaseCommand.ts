@@ -1,18 +1,18 @@
 import { CaseCommand } from '../CaseCommand';
 import { CaseOption } from '../../types';
 
-export class CamelCaseCommand extends CaseCommand {
+export class KebabCaseCommand extends CaseCommand {
     constructor() {
         super({
-            flags: ['--camelcase'],
+            flags: ['--snakecase'],
             description:
-                'Transforms all the filenames in the specified directory into camel casing.',
+                'Transforms all the filenames in the specified directory into kebab casing.',
         });
     }
 
     public execute(dir?: string): void {
         if (!dir) return;
 
-        this.fileManager.rename(dir, CaseOption.CamelCase);
+        this.fileManager.rename(dir, CaseOption.KebabCase);
     }
 }

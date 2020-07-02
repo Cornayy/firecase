@@ -1,4 +1,4 @@
-import { CommandContext } from './types/index';
+import { CommandContext } from '../types/index';
 
 export abstract class Command {
     public context: CommandContext;
