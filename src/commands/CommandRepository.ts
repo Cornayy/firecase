@@ -14,15 +14,19 @@ export class CommandRepository {
     }
 
     private collect(): void {
-        const { commandsPath, invokablePath } = options;
-        const files = readdirSync(commandsPath);
+        const { invokablePath } = options;
+        const files = readdirSync(join(__dirname, invokablePath), { withFileTypes: true });
 
-        const commands = files.map((file) => {
-            return new (Object.values(
-                require(join(__dirname, `${invokablePath}/${file.replace('ts', extension)}`))
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            )[0] as any)();
-        });
+        const commands = files
+            .map(({ name }) => {
+                if (name.endsWith(extension)) {
+                    return new (Object.values(
+                        require(join(__dirname, `${invokablePath}/${name}`))
+                        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                    )[0] as any)();
+                }
+            })
+            .filter((command) => command);
 
         this.commands.push(...commands);
     }
