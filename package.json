@@ -2,7 +2,7 @@
     "name": "firecase",
     "version": "0.3.1",
     "description": "Rename the files in your projects to match known casings.",
-    "main": "./lib/src/index.js",
+    "main": "./lib/index.js",
     "scripts": {
         "build": "tsc",
         "start:prod": "cross-env NODE_ENV=prod node lib/src/index.js",
@@ -14,7 +14,7 @@
         "url": "git+https://github.com/Cornayy/firecase.git"
     },
     "bin": {
-        "firecase": "./lib/src/index.js"
+        "firecase": "./lib/index.js"
     },
     "keywords": [
         "filecasing",
