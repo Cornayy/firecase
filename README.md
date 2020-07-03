@@ -26,3 +26,8 @@ OPTIONS
 ```
 
 ## Installation
+
+npm i -g firecase
+
+## License
+[MIT](LICENSE)
