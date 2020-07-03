@@ -26,9 +26,9 @@ OPTIONS
 ```
 
 ## Installation
+To be published..
 
 ```
-To be published..
 npm i -g firecase
 ```
 
