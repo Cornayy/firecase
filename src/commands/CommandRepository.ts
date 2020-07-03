@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-import path from 'path';
+import { join } from 'path';
 import { Command } from './Command';
 import { options, extension } from './../config/config';
 import { readdirSync } from 'fs';
@@ -19,7 +19,7 @@ export class CommandRepository {
 
         const commands = files.map((file) => {
             return new (Object.values(
-                require(path.join(__dirname, `${invokablePath}/${file.replace('ts', extension)}`))
+                require(join(__dirname, `${invokablePath}/${file.replace('ts', extension)}`))
                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
             )[0] as any)();
         });

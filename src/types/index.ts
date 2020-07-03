@@ -3,6 +3,12 @@ export interface CommandContext {
     description: string;
 }
 
+export interface RenameOptions {
+    dir: string;
+    file: string;
+    transform: string;
+}
+
 export interface CaseStrategy {
     transform(file: string): string;
 }

@@ -13,8 +13,8 @@ export class CaseStrategyFactory {
     constructor() {
         this.strategies = [
             { name: CaseOption.CamelCase, strategy: new CamelCaseStrategy() },
-            { name: CaseOption.KebabCase, strategy: new PascalCaseStrategy() },
-            { name: CaseOption.PascalCase, strategy: new KebabCaseStrategy() },
+            { name: CaseOption.KebabCase, strategy: new KebabCaseStrategy() },
+            { name: CaseOption.PascalCase, strategy: new PascalCaseStrategy() },
             { name: CaseOption.SnakeCase, strategy: new SnakeCaseStrategy() },
         ];
     }
