@@ -12,7 +12,9 @@ export class HelpCommand extends Command {
 
     public execute(): void {
         const repository = CommandRepository.getInstance();
-        const commands = repository.all();
+        const commands = repository
+            .all()
+            .sort((a, b) => a.context.flags.length - b.context.flags.length);
 
         Logger.info('USAGE');
         Logger.info('firecase [option...] [path]');

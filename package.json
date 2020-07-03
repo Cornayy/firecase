@@ -14,7 +14,7 @@
         "url": "git+https://github.com/Cornayy/firecase.git"
     },
     "bin": {
-        "firecase": "lib/index.js"
+        "firecase": "./lib/src/index.js"
     },
     "keywords": [
         "filecasing",

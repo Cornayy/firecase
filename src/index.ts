@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { Firecase } from './core/Firecase';
 
 if (process.env.NODE_ENV !== 'test') {
