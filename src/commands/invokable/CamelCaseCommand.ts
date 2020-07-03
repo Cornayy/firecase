@@ -11,8 +11,8 @@ export class CamelCaseCommand extends CaseCommand {
     }
 
     public execute(dir?: string): void {
-        if (!dir) return;
+        super.execute(dir);
 
-        this.fileManager.handle(dir, CaseOption.CamelCase);
+        if (dir) this.fileManager.handle(dir, CaseOption.CamelCase);
     }
 }

@@ -1,3 +1,4 @@
+import { Logger } from './../util/Logger';
 import { CommandContext } from '../types/index';
 import { Command } from './Command';
 import { FileManager } from '../core/FileManager';
@@ -10,5 +11,10 @@ export abstract class CaseCommand extends Command {
         this.fileManager = FileManager.getInstance();
     }
 
-    public abstract execute(dir?: string): void;
+    public execute(dir?: string): void {
+        if (!dir) {
+            Logger.error('No directory specified, use --help for more details about the usage.');
+            return;
+        }
+    }
 }

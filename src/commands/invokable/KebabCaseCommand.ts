@@ -11,8 +11,8 @@ export class KebabCaseCommand extends CaseCommand {
     }
 
     public execute(dir?: string): void {
-        if (!dir) return;
+        super.execute(dir);
 
-        this.fileManager.handle(dir, CaseOption.KebabCase);
+        if (dir) this.fileManager.handle(dir, CaseOption.KebabCase);
     }
 }
