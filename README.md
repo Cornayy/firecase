@@ -1,6 +1,4 @@
 # firecase
-
-## Description
 Rename the files in your projects to match popular casings.
 
 ## Usage
