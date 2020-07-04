@@ -4,7 +4,7 @@ import { CaseOption } from '../../types';
 export class KebabCaseCommand extends CaseCommand {
     constructor() {
         super({
-            flags: ['--kebabcase'],
+            flags: ['-K', '--kebabcase'],
             description:
                 'Transforms all the filenames in the specified directory into kebab casing.',
         });

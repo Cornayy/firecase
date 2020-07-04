@@ -14,10 +14,10 @@ OPTIONS
 
     CASINGS
 
---camelcase | Transforms all the filenames in the specified directory into camel casing.
---kebabcase | Transforms all the filenames in the specified directory into kebab casing.
---pascalcase | Transforms all the filenames in the specified directory into pascal casing. 
---snakecase | Transforms all the filenames in the specified directory into snake casing.
+-C, --camelcase | Transforms all the filenames in the specified directory into camel casing.
+-K, --kebabcase | Transforms all the filenames in the specified directory into kebab casing.
+-P, --pascalcase | Transforms all the filenames in the specified directory into pascal casing. 
+-S, --snakecase | Transforms all the filenames in the specified directory into snake casing.
 
     GENERAL
 
