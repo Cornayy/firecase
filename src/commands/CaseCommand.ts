@@ -16,5 +16,7 @@ export abstract class CaseCommand extends Command {
             Logger.error('No directory specified, use --help for more details about the usage.');
             return;
         }
+
+        this.fileManager.handle(dir, this.context.casing);
     }
 }

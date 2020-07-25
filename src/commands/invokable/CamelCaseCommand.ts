@@ -7,6 +7,7 @@ export class CamelCaseCommand extends CaseCommand {
             flags: ['-C', '--camelcase'],
             description:
                 'Transforms all the filenames in the specified directory into camel casing.',
+            casing: CaseOption.CamelCase,
         });
     }
 

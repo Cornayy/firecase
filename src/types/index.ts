@@ -1,6 +1,7 @@
 export interface CommandContext {
     flags: string[];
     description: string;
+    casing?: CaseOption;
 }
 
 export interface RenameOptions {

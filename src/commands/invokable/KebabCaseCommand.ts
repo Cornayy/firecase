@@ -7,12 +7,7 @@ export class KebabCaseCommand extends CaseCommand {
             flags: ['-K', '--kebabcase'],
             description:
                 'Transforms all the filenames in the specified directory into kebab casing.',
+            casing: CaseOption.KebabCase,
         });
-    }
-
-    public execute(dir?: string): void {
-        super.execute(dir);
-
-        if (dir) this.fileManager.handle(dir, CaseOption.KebabCase);
     }
 }

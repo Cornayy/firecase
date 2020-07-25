@@ -7,12 +7,7 @@ export class PascalCaseCommand extends CaseCommand {
             flags: ['-P', '--pascalcase'],
             description:
                 'Transforms all the filenames in the specified directory into pascal casing.',
+            casing: CaseOption.PascalCase,
         });
-    }
-
-    public execute(dir?: string): void {
-        super.execute(dir);
-
-        if (dir) this.fileManager.handle(dir, CaseOption.PascalCase);
     }
 }

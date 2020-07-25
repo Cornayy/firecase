@@ -7,12 +7,7 @@ export class SnakeCaseCommand extends CaseCommand {
             flags: ['-S', '--snakecase'],
             description:
                 'Transforms all the filenames in the specified directory into snake casing.',
+            casing: CaseOption.SnakeCase,
         });
-    }
-
-    public execute(dir?: string): void {
-        super.execute(dir);
-
-        if (dir) this.fileManager.handle(dir, CaseOption.SnakeCase);
     }
 }

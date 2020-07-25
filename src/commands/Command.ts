@@ -1,4 +1,4 @@
-import { CommandContext } from '../types/index';
+import { CommandContext, CaseOption } from '../types/index';
 
 export abstract class Command {
     public context: CommandContext;
@@ -7,6 +7,7 @@ export abstract class Command {
         this.context = {
             flags: context.flags || [],
             description: context.description || 'No description specified.',
+            casing: CaseOption.PascalCase,
         };
     }
 
