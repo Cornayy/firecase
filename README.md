@@ -1,6 +1,8 @@
 # firecase
 Rename the files in your projects to match popular casings.
 
+<a href="https://codeclimate.com/github/Cornayy/firecase/maintainability"><img src="https://api.codeclimate.com/v1/badges/058ed10dff32998222a2/maintainability" /></a>
+
 ## Usage
 
 ```
