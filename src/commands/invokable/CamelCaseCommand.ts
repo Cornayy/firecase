@@ -10,10 +10,4 @@ export class CamelCaseCommand extends CaseCommand {
             casing: CaseOption.CamelCase,
         });
     }
-
-    public execute(dir?: string): void {
-        super.execute(dir);
-
-        if (dir) this.fileManager.handle(dir, CaseOption.CamelCase);
-    }
 }
