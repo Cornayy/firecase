@@ -1,5 +1,5 @@
 # firecase
-Rename the files in your projects to match popular casings.
+A filename transformer that uses naming conventions.
 
 <a href="https://codeclimate.com/github/Cornayy/firecase/maintainability"><img src="https://api.codeclimate.com/v1/badges/058ed10dff32998222a2/maintainability" /></a>
 
