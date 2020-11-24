@@ -6,7 +6,7 @@ A filename transformer that uses naming conventions.
 ## Usage
 
 ```
-firecase - Rename the files in your projects to match popular casings.
+firecase - A filename transformer that uses naming conventions.
 
 USAGE
 
